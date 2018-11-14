@@ -7,8 +7,10 @@ void ofApp::setup(){
 jewel.load("diamond.png");// image to use (must be stored in "random/bin/data" folder)
 random_device rd;
 mt19937 eng1 (rd());
-uniform_int_distribution <> unx (0,1200);
-uniform_int_distribution <> uny (0,970);
+normal_distribution <> unx (300,75);
+normal_distribution <> uny (200,75);
+//uniform_int_distribution <> unx (0,1200);
+//uniform_int_distribution <> uny (0,970);
 for (int i=0; i < 20; i++)
 X.push_back(unx (eng1));// set of x-coordinates for jewel
 
